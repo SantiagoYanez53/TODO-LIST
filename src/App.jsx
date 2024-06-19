@@ -8,11 +8,11 @@ export default function App () {
     setTodos([...todos,text])
   }
   function removeTodo(indexToRemove) {
-    todos.splice(indexToRemove, 1)
-    setTodos([...todos])
+    //todos.splice(indexToRemove, 1)
+    //setTodos([...todos])
 
-    //const newTodos = todos.filter((todo, idx) => idx === indexToRemove);
-    //setTodos(newTodos)
+    const newTodos = todos.filter(((todo, idx) => idx !== indexToRemove));
+    setTodos(newTodos)
   }
   
   function onSubmit(event) {
